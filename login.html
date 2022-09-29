@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <html>
+    <head>
+      <title>Sign Up</title>
+      
+      <link rel="stylesheet" type="text/css" href="signup.css" />
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      />
+      <link
+        href="https://fonts.googleapis.com/css?family=Titillium+Web:400,300,600"
+        rel="stylesheet"
+        type="text/css"
+      />
+      <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    </head>
+
+    <body class="body">
+     
+      <div class="login-page">
+        <div class="form">
+          <form action="/index.html">
+            <input type="text" placeholder="email address"name="email" id="email" />
+            <input type="password" id="password" placeholder="set a password"name="password" />
+            <i class="fas fa-eye" onclick="show()"></i> 
+            <button onclick="submit()">Register</button>
+            <br>
+            <br>
+          </form>
+       </div>
+      </div>
+    </body>
+    <script>
+      function submit(){
+        let correctEmail = "keshav@gmail.com";
+        let correctPass ="Kesav@123"
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        if(email == correctEmail && password == correctPass ){
+          window.location.href = './index.html';
+        }else{
+          alert("Check Your Email and Password");
+          window.location.href ='./';
+        }
+        console.log(email+" "+password);
+      }
+      function show() {
+        var password = document.getElementById("password");
+        var icon = document.querySelector(".fas");
+
+        // ========== Checking type of password ===========
+        if (password.type === "password") {
+          password.type = "text";
+        } else {
+          password.type = "password";
+        }
+      }
+      function submit(){
+        alert()
+      }
+    </script>
+  </html>
+</html>
